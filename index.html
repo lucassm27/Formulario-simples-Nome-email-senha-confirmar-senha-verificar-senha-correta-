@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetinho</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <h1>Projetinho</h1>
+
+    <form onsubmit="return validarSenha()">
+
+        <input type="text" placeholder="Nome"><br><br>
+
+        <input required type="email" placeholder="Email"><br><br>
+
+        <input required type="password" id="senha" placeholder="Senha"><br><br>
+
+        <input required type="password" id="senhaC" placeholder="Confirmar Senha"><br><br>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <script>
+        function validarSenha() {
+            var senha = document.getElementById("senha").value;
+            var senhaC = document.getElementById("senhaC").value;
+
+            if (senha !== senhaC) {
+                alert("As senhas não coincidem!");
+                return false;
+            }
+
+            alert("Cadastro realizado com sucesso!");
+            return true;
+        }
+    </script>
+
+</body>
+</html>
